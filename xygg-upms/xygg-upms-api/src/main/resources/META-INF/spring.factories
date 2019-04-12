@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xygg.admin.api.feign.fallback.RemoteUserServiceFallbackImpl,\
+  com.xygg.admin.api.feign.fallback.RemoteLogServiceFallbackImpl,\
+  com.xygg.admin.api.feign.fallback.RemoteTokenServiceFallbackImpl,\
+  com.xygg.admin.api.feign.factory.RemoteUserServiceFallbackFactory,\
+  com.xygg.admin.api.feign.factory.RemoteLogServiceFallbackFactory,\
+  com.xygg.admin.api.feign.factory.RemoteTokenServiceFallbackFactory

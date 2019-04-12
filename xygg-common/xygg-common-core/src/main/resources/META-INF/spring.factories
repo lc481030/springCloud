@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xygg.common.core.config.JacksonConfig,\
+  com.xygg.common.core.config.RedisConfig,\
+  com.xygg.common.core.config.RestTemplateConfig,\
+  com.xygg.common.core.config.FilterIgnorePropertiesConfig,\
+  com.xygg.common.core.exception.GlobalExceptionHandler,\
+  com.xygg.common.core.util.SpringContextHolder

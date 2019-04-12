@@ -1,0 +1,35 @@
+server:
+  port: 8761
+
+spring:
+  security:
+    user:
+      name: xygg
+      password: xygg
+  application:
+    name: xygg-eureka
+  cloud:
+    config:
+      enabled: false
+
+# docker-compose部署时候 hostname 换成xygg-eureka
+# 类似的 redis 使用xygg-redis ,gateway 换成 xygg-gateway
+eureka:
+  instance:
+    hostname: xygg-eureka
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://xygg:xygg@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    eviction-interval-timer-in-ms: 4000
+    enable-self-preservation: false
+    renewal-percent-threshold: 0.9
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
